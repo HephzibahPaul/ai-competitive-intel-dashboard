@@ -142,3 +142,25 @@ Use advanced topic modeling (LDA, BERTopic)
 Add sentiment analysis per topic
 
 Export automated PDF insight reports
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Dashboard Home
+![Dashboard Home](assets/screenshots/dashboard_home.png)
+
+### 📌 Overview Page
+![Overview](assets/screenshots/overview_tab.png)
+
+### 🧠 Topics & Themes — Topic Summary
+![Topics Summary](assets/screenshots/topics_summary.png)
+
+### 🧠 Topics & Themes — Global Topic Importance
+![Global Topic Importance](assets/screenshots/topics_global_importance.png)
+
+### ⚔️ Competitor vs OurBrand — Table (Gap Analysis)
+![Competitor vs OurBrand Table](assets/screenshots/competitor_vs_ourbrand_table.png)
+
+### 📊 Competitor vs OurBrand — Rating Gap Chart
+![Competitor vs OurBrand Chart](assets/screenshots/competitor_vs_ourbrand_chart.png)
