@@ -1,0 +1,8 @@
+topic_id,topic_keywords,competitor_name,review_count,avg_rating
+0,"steps accurate, steps, accurate, replacement option, option, replacement, accurate replacement, love display",CompB,1,2.0
+0,"steps accurate, steps, accurate, replacement option, option, replacement, accurate replacement, love display",OurBrand,1,5.0
+1,"cheap, long, price connection, price, sound okay, connection drops, okay, okay price",CompA,1,2.0
+1,"cheap, long, price connection, price, sound okay, connection drops, okay, okay price",CompB,2,2.0
+1,"cheap, long, price connection, price, sound okay, connection drops, okay, okay price",OurBrand,2,4.0
+2,"quality, sound quality, quality packaging, packaging damaged, packaging, damaged, great, great sound",CompA,3,3.3333333333333335
+3,"app, updates improved, performance happy, updates, improved, app updates, improved performance, performance",OurBrand,2,4.5

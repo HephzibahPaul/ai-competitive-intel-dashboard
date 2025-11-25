@@ -1,0 +1,13 @@
+competitor_name,product_name,source,review_text,rating
+OurBrand,SmartFit Pro Watch,Amazon,"Love the display and battery life, steps seem accurate.",5
+OurBrand,SmartFit Pro Watch,Amazon,"Sleep tracking is good but app is a bit confusing.",4
+OurBrand,BassBeat Headphones,Amazon,"Bass is amazing, but the ear cups get uncomfortable after long use.",4
+CompA,FitPulse X2,Amazon,"Heart rate seems inaccurate, customer support very slow.",2
+CompA,FitPulse X2,Amazon,"Battery drains quickly and strap quality is poor.",2
+CompA,StereoMax 500,Amazon,"Great sound quality but packaging was damaged.",4
+CompB,ActiveTrack Lite,Google,"Cheap build, band broke in two weeks. Not happy.",1
+CompB,ActiveTrack Lite,Google,"Steps are not accurate, and no replacement option.",2
+CompB,SoundLite Mini,Amazon,"Sound is okay for the price, but connection drops often.",3
+OurBrand,SmartFit Pro Watch,Google,"App updates improved performance, very happy now.",5
+CompA,StereoMax 500,Google,"Mic quality is average, but music quality is excellent.",4
+OurBrand,BassBeat Headphones,Google,"Comfortable even after long calls, but case feels cheap.",4
