@@ -166,7 +166,9 @@ python -m src.nlp_analysis
 Launch dashboard
 streamlit run app/app.py
 
-📁 8. Project Structure
+## 📁 8. Project Structure
+
+```bash
 ai-competitive-intel-dashboard/
 │
 ├── app/
@@ -183,13 +185,12 @@ ai-competitive-intel-dashboard/
 ├── src/
 │   ├── config.py                 # Global configurations
 │   ├── nlp_utils.py              # NLP preprocessing helpers
-│   └── nlp_analysis.py           # Main NLP + topic modeling pipeline
+│   └── nlp_analysis.py           # NLP + topic modeling pipeline
 │
-├── screenshots/                  # Optional images/documentation
-│
-├── requirements.txt              # Python dependencies
-├── LICENSE                       # MIT License
-└── README.md                     # Project documentation
+├── screenshots/                  # Optional documentation images
+├── requirements.txt
+├── LICENSE
+└── README.md
 
 💡 9. Skills Demonstrated
 Technical Skills
