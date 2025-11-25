@@ -163,4 +163,4 @@ Export automated PDF insight reports
 ![Competitor vs OurBrand Table](screenshots/competitor_vs_ourbrand_table.png)
 
 ### 📊 Competitor vs OurBrand — Rating Gap Chart
-![Competitor vs OurBrand Chart](screenshots/competitor_vs_ourbrand_chart.png)
+![Competitor vs OurBrand Chart](screenshots/gap_analysis_chart.png)
