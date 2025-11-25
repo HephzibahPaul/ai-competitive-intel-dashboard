@@ -1,144 +1,217 @@
-# 🏁 AI Competitive Intelligence Dashboard (NLP on Reviews)
+🏁 AI Competitive Intelligence Dashboard
+NLP-Driven Review Analytics for Product, Marketing & Strategy Teams
 
-## 1. Overview
+This project delivers an AI-powered Competitive Intelligence system that analyzes customer reviews using TF-IDF vectorization + KMeans clustering and presents insights through an interactive Streamlit dashboard.
 
-This project is an **AI-powered Competitive Intelligence Dashboard** that uses
-**NLP (topic clustering)** on customer reviews to compare **OurBrand** with
-competitors.
+Designed from a Business Analyst viewpoint, the project identifies customer pain points, feature gaps, and competitor strengths to support data-driven decision-making.
 
-It is designed from a **Business Analyst** perspective to help:
-- Product teams find feature gaps
-- Marketing teams understand messaging opportunities
-- Strategy teams benchmark against competitors
+🚀 1. Project Overview
 
-Built with:
-- Python (Pandas, Scikit-Learn)
-- TF-IDF + KMeans clustering
-- Streamlit for the dashboard UI
+Modern organizations collect thousands of customer reviews across digital platforms. Manually reading these reviews is:
 
----
+Time-consuming
 
-## 2. Business Problem
+Prone to bias
 
-Companies get lots of reviews on platforms like Amazon and Google, across
-multiple brands and products. Manually reading these:
+Unscalable
 
-- Takes too long
-- Misses patterns
-- Is not scalable
+Ineffective for extracting hidden themes
 
-This project answers:
-- “What are customers complaining about for each competitor?”
-- “On which topics is OurBrand better or worse?”
-- “What themes are most important for improvement?”
+This project automates review analysis to provide:
 
----
+Topic-based insights
 
-## 3. Data
+Competitor comparison
 
-Synthetic but realistic CSVs in `data/raw`:
+Customer sentiment patterns
 
-- `competitor_products_sample.csv`
-  - competitor_name, product_name, category, price, rating, description
+Feature improvement opportunities
 
-- `competitor_reviews_sample.csv`
-  - competitor_name, product_name, source, review_text, rating
+🎯 2. Business Value
 
-You can extend these files with more rows to make the analysis richer.
+The dashboard enables teams to:
 
----
+Product Teams
 
-## 4. NLP & Modeling Approach
+Identify recurring issues
 
-1. **Preprocessing**
-   - Lowercasing, removing punctuation
-   - Basic normalization → `clean_text`
+Detect feature gaps across competitors
 
-2. **Vectorization**
-   - `TfidfVectorizer` (1–2 word n-grams)
-   - max_features = 2000
-   - English stopwords
+Marketing & CX Teams
 
-3. **Topic Modeling (Clustering)**
-   - `KMeans` with `N_TOPICS = 4`
-   - Each review gets a `topic_id`
-   - Top keywords per topic → `topic_keywords`
+Understand customer expectations
 
-4. **Aggregation**
-   - For each `(topic_id, competitor_name)`:
-     - `review_count`
-     - `avg_rating`
+Compare sentiment trends across brands
 
-Results saved to:
-- `data/processed/reviews_with_topics.csv`
-- `data/processed/topic_summary.csv`
+Strategy Teams
 
----
+Benchmark performance against competitors
 
-## 5. Dashboard Features (Streamlit)
+Uncover competitive advantages/disadvantages
 
-Run:
+🧠 3. Techniques & Tools Used
+Technical Stack
 
-```bash
-streamlit run app/app.py
-The app has 3 main tabs:
+Python
 
+Pandas
+
+NumPy
+
+Scikit-Learn
+
+TF-IDF Vectorizer
+
+KMeans Clustering
+
+Streamlit (Dashboard UI)
+
+NLP Methods
+
+Text preprocessing
+
+Stopword removal
+
+TF-IDF feature extraction
+
+Topic modeling (KMeans)
+
+📊 4. Data Sources
+
+Located in data/raw/:
+
+competitor_products_sample.csv
+competitor_name, product_name, category, price, rating, description
+
+competitor_reviews_sample.csv
+competitor_name, product_name, source, review_text, rating
+
+Pipeline Outputs
+
+(Generated after running NLP pipeline)
+
+data/processed/reviews_with_topics.csv
+
+data/processed/topic_summary.csv
+
+🧩 5. NLP Pipeline Workflow
+Step 1 — Preprocessing
+
+Lowercase transformation
+
+Punctuation removal
+
+Stopword removal
+
+Clean text stored as clean_text
+
+Step 2 — Vectorization
+
+TF-IDF with bi-grams
+
+2000 max features
+
+Step 3 — Topic Modeling
+
+KMeans with 4 clusters
+
+Extracts top keywords per topic
+
+Each review assigned a topic_id
+
+Step 4 — Aggregation
+
+Topic-wise review clustering
+
+Topic average ratings
+
+Competitor-topic distribution
+
+All results are saved as processed CSV files.
+
+🖥️ 6. Dashboard Features (Streamlit)
 📌 Overview
-Total reviews (after filters)
+
+Total number of reviews
 
 Average rating
 
-Average rating by competitor (table + bar chart)
+Competitor rating comparison
 
 🧠 Topics & Themes
-Topic-wise review counts per competitor
 
-Global list of topics with:
+Topic keywords
 
-keywords
+Topic volumes
 
-total review volume
+Topic-level average ratings
 
-average rating
+Competitor distribution across topics
 
 ⚔️ Competitor vs OurBrand
-Compare OurBrand vs one competitor on each topic
 
-See topic-wise rating gap:
+Topic-wise rating gap
 
-Positive → OurBrand better
+Areas where competitors perform better
 
-Negative → Competitor better
+Areas where OurBrand leads
 
-6. How to Run the Project
-1️⃣ Install dependencies
-bash
-Copy code
+🛠️ 7. How to Run the Project
+Install all dependencies
 pip install -r requirements.txt
-2️⃣ Run NLP pipeline (build topics)
-bash
-Copy code
+
+Run NLP pipeline
 python -m src.nlp_analysis
-3️⃣ Launch the dashboard
-bash
-Copy code
+
+Launch dashboard
 streamlit run app/app.py
-7. Skills Demonstrated
-Designed a competitive intelligence solution using NLP
 
-Implemented text preprocessing, TF-IDF, and KMeans clustering
+📁 8. Project Structure
+ai-competitive-intel-dashboard/
+│
+├── app/
+│   └── app.py                    # Streamlit dashboard application
+│
+├── data/
+│   ├── raw/                      # Original input CSVs
+│   │   ├── competitor_products_sample.csv
+│   │   └── competitor_reviews_sample.csv
+│   └── processed/                # Generated NLP outputs
+│       ├── reviews_with_topics.csv
+│       └── topic_summary.csv
+│
+├── src/
+│   ├── config.py                 # Global configurations
+│   ├── nlp_utils.py              # NLP preprocessing helpers
+│   └── nlp_analysis.py           # Main NLP + topic modeling pipeline
+│
+├── screenshots/                  # Optional images/documentation
+│
+├── requirements.txt              # Python dependencies
+├── LICENSE                       # MIT License
+└── README.md                     # Project documentation
 
-Aggregated results into topic-level business metrics
+💡 9. Skills Demonstrated
+Technical Skills
 
-Built an interactive Streamlit dashboard for non-technical stakeholders
+NLP (TF-IDF, KMeans)
 
-Interpreted model output into BA-style actionable insights
+Text preprocessing
 
-8. Possible Extensions
-Add real (scraped or exported) review data
+Feature extraction
 
-Use advanced topic modeling (LDA, BERTopic)
+Data cleaning and transformation
 
-Add sentiment analysis per topic
+Dashboard development with Streamlit
 
-Export automated PDF insight reports
+Business Analysis Skills
+
+Competitive intelligence
+
+Customer pain point identification
+
+Topic-based review interpretation
+
+Insight summarization
+
+Dashboard storytelling for stakeholders
