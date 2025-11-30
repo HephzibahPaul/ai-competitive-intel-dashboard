@@ -216,3 +216,9 @@ Topic-based review interpretation
 Insight summarization
 
 Dashboard storytelling for stakeholders
+
+10. Author
+
+Hephzibah Paul
+Business Analyst | AI & Data Analytics
+GitHub: https://github.com/HephzibahPaul
